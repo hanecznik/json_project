@@ -1,0 +1,19 @@
+{
+  "manager": {
+    "name": "John Smith",
+    "age": 45,
+    "department": "Engineering",
+    "salary": 120000,
+    "projects": ["One", "Two"]
+  },
+  "projects": [
+    {
+      "projectName": "One",
+      "startDate": "2024-01-01"
+    },
+    {
+      "projectName": "Two",
+      "startDate": "2024-06-01"
+    }
+  ]
+}
