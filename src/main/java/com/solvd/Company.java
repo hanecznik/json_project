@@ -7,7 +7,6 @@ public class Company {
     private Manager manager;
     private List<Project> projects;
 
-    // Gettery i Settery
     public Manager getManager() { return manager; }
     public void setManager(Manager manager) { this.manager = manager; }
 

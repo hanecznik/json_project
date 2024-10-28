@@ -8,10 +8,13 @@ public class Project {
     private String projectName;
     private Date startDate;
 
+    public Project() {}
+
     public String getProjectName() { return projectName; }
     public void setProjectName(String projectName) { this.projectName = projectName; }
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     public Date getStartDate() { return startDate; }
+
     public void setStartDate(Date startDate) { this.startDate = startDate; }
 }

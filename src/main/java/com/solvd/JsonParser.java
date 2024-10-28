@@ -9,19 +9,30 @@ import java.io.IOException;
 
 public class JsonParser {
 
-    public static void main(String[] args) {
+    public Company parseJson(String filePath) {
         ObjectMapper objectMapper = new ObjectMapper();
-
         try {
-            Company company = objectMapper.readValue(new File("src/main/resources/data.json"), Company.class);
-
-            System.out.println("Manager: " + company.getManager().getName());
-            System.out.println("Projekty:");
-            for (Project project : company.getProjects()) {
-                System.out.println(" - " + project.getProjectName() + " (Start Date: " + project.getStartDate() + ")");
-            }
+            return objectMapper.readValue(new File(filePath), Company.class);
         } catch (IOException e) {
             e.printStackTrace();
+            return null;
         }
     }
 }
+
+//    public static void main(String[] args) {
+//        ObjectMapper objectMapper = new ObjectMapper();
+//
+//        try {
+//            Company company = objectMapper.readValue(new File("src/main/resources/data.json"), Company.class);
+//
+//            System.out.println("Manager: " + company.getManager().getName());
+//            System.out.println("Projects:");
+//            for (Project project : company.getProjects()) {
+//                System.out.println(" - " + project.getProjectName() + " (Start Date: " + project.getStartDate() + ")");
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+//}
